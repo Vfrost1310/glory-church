@@ -1,0 +1,269 @@
+/* Hero section */
+.hero{
+    background-image: url(/img/light-cross.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--ct-light);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+}
+    .hero .container {
+        width: 100%;
+    }
+    .hero-cont {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+        .hero p {
+            font-size: 20px;
+        }
+
+/* Welcome section */
+.top-wrap {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    height: 90vh;
+}
+    .top-wrap .text-cont {
+        padding: 40px;
+        width: 35%;
+        z-index: 20;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .top-wrap .img-cont {
+        position: absolute;
+        top: 250px;
+        right: 0;
+        width: 75%
+    }
+        .top-wrap .img-cont.anim {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        .top-wrap img {
+            width: 100%;
+        }
+.bott-wrap {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 0;
+}
+    .bott-wrap .text-cont {
+        flex: 1;
+    }
+        .bott-wrap .text-cont.anim {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    .bott-wrap .img-cont {
+        flex: 1;
+    }
+        .bott-wrap img {
+            width: 100%;
+        }
+        #welcome-section h2, #welcome-section h3 {
+            margin-bottom: 20px;
+        }
+            #welcome-section h2 {
+                font-size: 52px;
+            }
+        #welcome-section p {
+            margin-bottom: 15px;
+        }
+        #welcome-section .btn {
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+/* Last sermon section */
+#latest-prop {
+    background-color: var(--cbg-secondary);
+    text-align: center;
+}
+    #latest-prop h2 {
+        color: var(--ct-light);
+        margin-bottom: 40px;
+    }
+    #latest-prop .video-preview {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        background-color: var(--cbg-main);
+        border-radius: 9px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+        #latest-prop .video-preview.anim {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        .video-preview iframe {
+            width: 60%;
+            height: 380px;
+            border-radius: 8px;
+        }
+    .sermon-details {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+/* Cards section */
+#resources {
+    text-align: center;
+}
+    #resources h2 {
+        margin-bottom: 50px;
+    }
+    .resources-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        gap: 30px;
+    }
+        .resources-card {
+            background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/vert-music.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+                .resources-card.anim {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: opacity 1s ease 200ms, transform 1s ease 200ms, transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                }
+            .resources-card:first-child {
+                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/vert-bible.jpg);
+            }
+                .resources-card.anim:first-child {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: opacity 1s ease, transform 1s ease,
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                }
+            .resources-card:last-child {
+                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/spine-crown-red.jpg);
+            }
+                .resources-card.anim:last-child {
+                    opacity: 0;
+                    transform: translateY(100px);
+                    transition: opacity 1s ease 400ms, transform 1s ease 400ms,
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
+                }
+        .resources-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .resources-card img {
+            width: 100%;
+        }
+        .resources-card h4 {
+            color: var(--ct-light);
+        }
+        .resources-card p {
+            color: var(--ct-light);
+            min-height: 88px;
+        }
+
+/* Footer */
+#footer {
+    background-color: var(--ct-dark);
+    color: var(--ct-light);
+    padding: 60px 0 20px 0;
+    line-height: 1.5;
+}
+#footer .foot-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+#footer h5 {
+    color: var(--cbg-accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#footer p {
+    margin-bottom: 10px;
+}
+.quick-links li,
+.resources-links li {
+    display: block;
+    margin-bottom: 8px;
+}
+#footer a {
+    color: var(--ct-light);
+    transition: color 0.2s ease;
+}
+#footer a:hover {
+    color: var(--cbg-accent);
+}
+.social-media .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.social-media .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--cbg-accent);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease !important;
+}
+.social-media .social-icons a:hover {
+    background-color: var(--cbg-accent);
+    opacity: 1;
+}
+.social-media .sttmnt {
+    font-style: italic;
+    color: var(--ct-light);
+    opacity: 0.9;
+}
+.footer-legal {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(247, 245, 238, 0.1);
+}
+
+.footer-legal p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.ated {
+    opacity: 1 !important;
+    transform: none !important;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glory Church</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function checkElementsForScroll() {
+        const elementsToAnimate = document.querySelectorAll(".anim");
+        const triggerBottom = (window.innerHeight / 5) * 4;
+        elementsToAnimate.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < triggerBottom) {
+            element.classList.add("ated");
+          }
+        });
+      }
+      window.addEventListener("scroll", checkElementsForScroll);
+      checkElementsForScroll();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="head-cont" class="container head-cont">
+        <div class="logo">
+          <a href="/">
+            <img
+              loading="lazy"
+              src="/img/logo.png"
+              alt="Logo Chiesa"
+              height="72"
+            />
+          </a>
+        </div>
+
+        <nav class="navbar">
+          <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/about.html">Su Noi</a>
+            </li>
+            <li class="dropdown">
+              <a class="nav-link" href="/pages/resources/resources.html"
+                >Risorse Online</a
+              >
+              <ul class="dropmenu">
+                <li>
+                  <a class="nav-link" href="/pages/resources/prop.html"
+                    >Sermoni</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link" href="/pages/resources/music.html"
+                    >Musica</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link" href="/pages/resources/books.html"
+                    >Libri</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/activity.html">Eventi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contacts.html">Contatti</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="head-tools">
+          <div class="dropdown">
+            <a class="nav-link" href="#" class="current-lang"
+              ><img
+                loading="lazy"
+                src="/img/icons/italy.webp"
+                alt="Ukrainian flag icon"
+            /></a>
+            <ul class="dropmenu">
+              <li>
+                <a href="en/index.html"
+                  ><img
+                    loading="lazy"
+                    src="/img/icons/ukraine.webp"
+                    alt="English flag icon"
+                /></a>
+              </li>
+              <li>
+                <a href="ru/index.html"
+                  ><img
+                    loading="lazy"
+                    src="/img/icons/uk.webp"
+                    alt="Russian flag icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="menu-btn" aria-label="Apri Menu">&#9776;</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero-section" class="hero">
+        <div class="container">
+          <div class="hero-cont">
+            <h1>Benvenuti a Glory Church</h1>
+            <p>
+              Un luogo di accoglienza e di crescita nella Parola di Dio, anche
+              in tempi difficili.
+            </p>
+            <a href="/pages/activity.html" class="btn"
+              >Unisciti a noi Domenica</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="welcome-section">
+        <div class="container">
+          <div class="top-wrap">
+            <div class="text-cont anim">
+              <h2>Benvenuti nella Nostra Famiglia</h2>
+              <p>
+                [Breve citazione o messaggio del pastore. Ad esempio:] "Gesù
+                disse: 'Io sono la via, la verità e la vita.' Troviamo la nostra
+                forza e il nostro scopo in Lui."
+              </p>
+              <a href="/pages/about.html" class="btn">La Nostra Storia</a>
+            </div>
+            <div class="img-cont anim">
+              <img
+                loading="lazy"
+                src="/img/jesus-horiz.jpg"
+                alt="Bambini che giocano in chiesa"
+              />
+            </div>
+          </div>
+
+          <div class="bott-wrap">
+            <div class="img-cont anim">
+              <img
+                loading="lazy"
+                src="/img/prayer-horiz.jpg"
+                alt="Gruppo di persone che studiano la Bibbia"
+              />
+            </div>
+            <div class="text-cont anim">
+              <h3>Orari dei Culti</h3>
+              <p>
+                <strong>Culto di Adorazione:</strong> Domenica, 10:00 (In
+                presenza e Online)
+              </p>
+              <p>
+                <strong>Studio Biblico:</strong> Mercoledì, 19:00 (Online via
+                YouTube)
+              </p>
+              <p><strong>Indirizzo:</strong> [Indirizzo fisico della Chiesa]</p>
+              <a href="/pages/activity.html" class="btn">I nostri eventi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latest-prop">
+        <div class="container">
+          <h2>Ultimo Messaggio</h2>
+          <div class="video-preview anim">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/live/FJAq35Sq_UI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="sermon-details">
+              <h4>Titolo del Messaggio: [Esempio: "La Pace nel Caos"]</h4>
+              <p><strong>Predicatore:</strong> Pastore [Nome]</p>
+              <p><strong>Data:</strong> [Data recente]</p>
+              <a href="/pages/resources/prop.html" class="btn"
+                >Vedi l'archivio completo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources">
+        <div class="container">
+          <h2>Risorse per la Tua Crescita</h2>
+          <div class="resources-cont">
+            <div class="resources-card anim">
+              <h4>Libri Cristiani Online</h4>
+              <p>
+                Una selezione di libri e studi scaricabili gratuitamente per
+                approfondire la tua fede.
+              </p>
+              <a href="/pages/resources/libri.html" class="btn"
+                >Esplora la Libreria</a
+              >
+            </div>
+
+            <div class="resources-card anim">
+              <h4>Musica Cristiana</h4>
+              <p>
+                Canti di lode e adorazione con link diretti alle nostre playlist
+                su YouTube.
+              </p>
+              <a href="/pages/resources/musica.html" class="btn">Ascolta Ora</a>
+            </div>
+
+            <div class="resources-card anim">
+              <h4>Aiuto Umanitario</h4>
+              <p>
+                Scopri come stiamo supportando la nostra comunità e come puoi
+                contribuire alle nostre iniziative.
+              </p>
+              <a href="/pages/donat.html" class="btn">Scopri di Più</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="container foot-cont">
+        <div class="contact-info">
+          <h5>Contattaci</h5>
+          <p>
+            <strong>Indirizzo:</strong> [Indirizzo Fisico Completo, Città,
+            Ucraina]
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@tuochiesa.ua">info@tuochiesa.ua</a>
+          </p>
+          <p><strong>Telefono:</strong> [+380 XX XXX XX XX]</p>
+        </div>
+
+        <div class="quick-links">
+          <h5>Navigazione</h5>
+          <ul>
+            <li>
+              <a class="nav-link" href="/pages/about.html">La Nostra Storia</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/pages/activity.html">Eventi</a>
+            </li>
+            <li>
+              <a class="nav-link" href="/pages/donat.html">Donazioni</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resources-links">
+          <h5>Risorse Utili</h5>
+          <ul>
+            <li>
+              <a class="nav-link" href="/pages/resources/books.html"
+                >Libri Online</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/pages/resources/music.html"
+                >Musica Cristiana</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/pages/resources/prop.html"
+                >Archivio Messaggi</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="social-media">
+          <h5>Seguici</h5>
+          <div class="social-icons">
+            <a href="[LINK FACEBOOK]" target="_blank" aria-label="Facebook">
+            </a>
+            <a href="[LINK YOUTUBE]" target="_blank" aria-label="YouTube"></a>
+            <a href="[LINK INSTAGRAM]" target="_blank" aria-label="Instagram">
+            </a>
+            <a href="[LINK TELEGRAM]" target="_blank" aria-label="Telegram">
+            </a>
+          </div>
+
+          <p class="sttmnt">
+            "La nostra missione: Amare Dio, servire il prossimo."
+          </p>
+        </div>
+        <div class="footer-legal">
+          <p>
+            &copy; 2024 Chiesa Cristiana Evangelica [Nome]. Tutti i diritti
+            riservati.
+          </p>
+          <p>Realizzato con fede e speranza.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

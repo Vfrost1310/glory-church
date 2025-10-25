@@ -1,0 +1,216 @@
+:root {
+    --cbg-main: #FFFFFF;
+    --cbg-secondary: #1C3F5E;  
+    --cbg-accent: #D4A84D;
+    --cbg-accent-active: #C9973E;
+    --ct-dark: #1C3F5E;
+    --ct-light: #F7F5EE;
+    --f-p: "Philosopher", sans-serif;
+    --f-h: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--f-p);
+    background-color: var(--cbg-main);
+    color: var(--ct-dark);
+    line-height: 1.2;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    font-family: var(--f-h);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+h1 {
+    font-size: 72px;
+}
+h2 {
+    font-size: 45px;
+}
+h3 {
+    font-size: 40px;
+}
+h4 {
+    font-size: 30px;
+}
+h5 {
+    font-size: 24px;
+}
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Default */
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+ul li {
+    display: inline-block;
+}
+img {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+section {
+    padding: 90px 16px;
+    margin: auto;
+}
+.container {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+/* Button general */
+button, .btn {
+    background-color: var(--cbg-accent);
+    color: var(--ct-dark);
+    padding: 12px 16px;
+    font-family: var(--f-h);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+button:hover,
+button:focus,
+.btn:hover,
+.btn:focus {
+    background-color: var(--cbg-accent-active);
+}
+button:active,
+.btn:active {
+    background-color: var(--cbg-accent-active);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--cbg-accent);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cbg-accent-active);
+}
+
+/* Header */
+header {
+    background-color: var(--cbg-main);
+    font-family: var(--f-h);
+    font-size: 17px;
+    font-weight: 500;
+
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+    header .nav-link, footer .nav-link {
+        white-space: nowrap;
+        position: relative;
+    }
+    header .nav-link::after, footer .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 2px;
+        width: 0;
+        opacity: 0.9;
+        background: var(--ct-dark);
+        transition: width 0.2s ease;
+    }
+    header .nav-link:hover::after,
+    header .nav-link:focus::after,
+    footer .nav-link:hover::after,
+    footer .nav-link:focus::after {
+        width: 100%;
+    }
+    .head-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+    }
+        .navbar .nav-menu {
+            display: flex;
+            gap: 18px;
+        }
+            .nav-item {
+                min-height: 72px;
+                display: flex;
+                align-items: center;
+            }
+            .dropdown {
+                position: relative;
+                min-height: 72px;
+                min-width: 100px; 
+                display: flex;
+                align-items: center;
+            }
+                .dropmenu {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    gap: 4px;
+                    top: 100%;
+                    background-color: var(--cbg-accent);
+                    padding: 0 12px;
+                    color: var(--ct-dark);
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    transform: translateX(-12px);
+                    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out, gap 0.3s ease-in-out;
+                }
+                .dropdown:hover .dropmenu,
+                .dropdown:focus-within .dropmenu {
+                    max-height: 500px;
+                    opacity: 1;
+                    padding: 12px;
+                    gap: 14px;
+                }
+        .head-tools {
+            display: flex;
+        }
+            .menu-btn {
+                display: none;
+            }
