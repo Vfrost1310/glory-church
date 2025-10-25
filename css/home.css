@@ -1,6 +1,6 @@
 /* Hero section */
 .hero{
-    background-image: url(/img/light-cross.jpg);
+    background-image: url(./img/light-cross.jpg);
     background-size: cover;
     background-position: center;
     color: var(--ct-light);
@@ -133,7 +133,7 @@
         gap: 30px;
     }
         .resources-card {
-            background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/vert-music.jpg);
+            background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(./img/vert-music.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -154,7 +154,7 @@
                         box-shadow 0.3s ease;
                 }
             .resources-card:first-child {
-                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/vert-bible.jpg);
+                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(./img/vert-bible.jpg);
             }
                 .resources-card.anim:first-child {
                     opacity: 0;
@@ -164,7 +164,7 @@
                         box-shadow 0.3s ease;
                 }
             .resources-card:last-child {
-                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(/img/spine-crown-red.jpg);
+                background-image: linear-gradient(to top, #1c3f5e, rgb(46 47 66 / 0%)), url(./img/spine-crown-red.jpg);
             }
                 .resources-card.anim:last-child {
                     opacity: 0;
